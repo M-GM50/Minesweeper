@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Questrial&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Darker Grotesque';
+  color:rgba(187, 190, 201, 0.7);
+  font-size: 40px;
+  background-color: rgb(7, 54, 81);
+  padding: 16px;
+}
+
+.game-container {
+  width: 484px;
+}
+
+.game-panel{
+    font-family: 'Cherry Bomb One', system-ui;
+    text-align: center;
+}
+
+.game-panel h1{
+  font-size: 60px;
+  font-style: italic;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+  75deg,
+  hsl(16deg 90% 49%) 0%,
+  hsl(21deg 94% 48%) 14%,
+  hsl(26deg 95% 48%) 24%,
+  hsl(29deg 93% 48%) 31%,
+  hsl(35deg 100% 47%) 36%,
+  hsl(42deg 100% 47%) 40%,
+  hsl(50deg 100% 47%) 45%,
+  hsl(60deg 100% 45%) 50%,
+  hsl(54deg 100% 46%) 56%,
+  hsl(41deg 100% 48%) 65%,
+  hsl(30deg 100% 48%) 78%,
+  hsl(16deg 90% 49%) 100%);
+  -webkit-background-clip: text;
+}
+
+.game-board{
+  border: 2px solid hsl(45, 81%, 49%);
+  position:relative;
+}
+
+.score{
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: underline;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell{
+  border: 1px solid hsl(45, 81%, 49%);
+  width: 48px;
+  height: 48px;
+  cursor:pointer;
+
+}
+
+.end-game-screen{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  background-color: rgba(48, 74, 168, 0.7);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.end-game-text{
+  margin-left: 15px;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Press Start 2P";
+  color: hsl(45, 81%, 49%);
+  text-shadow:-3px 4px 0px black,
+              -10px 10px 0px black;            
+}
+
+.btn {
+  font-size:24px;
+  font-family: "Darker Grotesque";
+  padding: 4px 20px 8px 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid rgb(0, 23, 50);
+  color: white;
+  text-shadow:2px 1px 0px black;
+  background-color: hsl(54deg 100% 46%);
+}
+
+.btn:hover{
+  background-color: rgb(203,224,221);
+
+}
+
+.hidden{
+  display:none;
+}
+
+.cell-clicked{
+  background-color: rgb(157,197,199);
+  cursor: not-allowed;
+}
+
+.win{
+ background-color: rgba(78,241,187,0.7);
+}
+
+.cell-bomb{
+  background-image:url("./images/bomb.svg");
+  background-size:contain;
+}
